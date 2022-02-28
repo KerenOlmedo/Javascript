@@ -3,7 +3,7 @@
 // console.log(`${grausFahrenheit} graus Fahrenheit é igual à: ${calculo} graus Celsius`)
 
 function fahrenheitToCelsius(temperatura){
-    const calculo = temperatura * 9 / 5 + 32
+    const calculo = (temperatura - 32) / 1.8
     return `${temperatura} graus Fahrenheit é igual à: ${calculo} graus Celsius`
 }
 
