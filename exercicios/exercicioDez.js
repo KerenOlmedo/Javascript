@@ -1,4 +1,6 @@
-function aumentoSalarial(salario) {
+function aumentoSalarial() {
+    const salario = parseFloat (document.getElementById("salario").value)
+    console.log(salario)
     const percentual20 = 0.20
     const percentual15 = 0.15
     const percentual10 = 0.10
@@ -22,10 +24,22 @@ function aumentoSalarial(salario) {
         aumento  = salario * percentual5
     }
     novoSalario = salario + aumento
-    return`Salario antes do reajuste:${salario}, percentual de aumento aplicado:${percentual}, o valor do aumento:${aumento}, novo salário:${novoSalario}`
+    const resposta = `
+    <div class="form-group" style="padding-top: 20px;">
+        <label for="">Percentual de aumento aplicado:</label>
+        <h2>Salario antes do reajuste: ${salario}</h2>
+        <h2>Percentual de aumento aplicado: ${percentual}</h2>
+        <h2>Valor do aumento: ${aumento.toFixed(2)}</h2>
+        <h2>Novo salário: ${novoSalario.toFixed(2)}</h2>
+    </div>
+    `
+    if (salario) {
+        document.getElementById("resposta").innerHTML = resposta
+    }
+    //return`Salario antes do reajuste:${salario}, percentual de aumento aplicado:${percentual}, o valor do aumento:${aumento}, novo salário:${novoSalario}`
 }
 
-console.log(aumentoSalarial(1700.50))
+
 
 //o salário antes do reajuste; o percentual de aumento aplicado; o valor do aumento; o novo salário, após o aumento.
 
