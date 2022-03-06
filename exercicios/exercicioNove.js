@@ -1,5 +1,7 @@
-function dataExtenso(data) {
-  const listaData = data.split('/')
+function dataExtenso() {
+  const data = document.getElementById("data").value
+  const listaData = data.split('-')
+  console.log(data);
   let mes = ''
   const mesNumero = parseInt(listaData[1])
   switch (mesNumero) {
@@ -42,12 +44,7 @@ function dataExtenso(data) {
     default:
         return "Nenhum mês correspondente"
     }
-   return `Data: ${listaData[0]} de ${mes} de ${listaData[2]}`
    //Data: 18 de Maio de 2017
+   document.getElementById("dataExtenso").innerHTML = `${listaData[2]} de ${mes} de ${listaData[0]}`
 }
   
-  
-   [18, 05, 2017]
-  
-  const data = '18/05/2017';
- console.log (dataExtenso(data))
