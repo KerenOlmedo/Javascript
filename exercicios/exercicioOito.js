@@ -9,9 +9,8 @@
 
 function sequencial() {
     const listaOriginal = document.getElementById("listaAleatoria").value
-    const listaOrdenada = listaOriginal.sort(function(a, b){
-       return a - b})
+    const lista = listaOriginal.split(",")
+    const listaOrdenada = lista.sort((a, b) => a - b)
     document.getElementById("listaOriginal").innerHTML = listaOriginal
-    document.getElementById("ListaOrdenada").innerHTML = listaOrdenada
-    console.log(listaOriginal, listaOrdenada)
+    document.getElementById("listaOrdenada").innerHTML = listaOrdenada
 }
