@@ -1,0 +1,18 @@
+#card{
+    padding: 12px;
+
+}
+
+.card{
+    width: 334px;
+    height: 264px;
+}
+
+a{
+    position: absolute;
+    bottom: 15px;
+}
+
+.card-img-top{
+    width: 64px;
+}
