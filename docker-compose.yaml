@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - 80:80
+    volumes:
+      - PrimeiroSite:/usr/share/nginx/html 
+      #(Isso mapeará a pasta "site" do host para a pasta "/usr/share/nginx/html" dentro do container Nginx.)
+
+#-Executar o seguinte comando no diretório onde o arquivo docker-compose.yml está localizado para que o Docker Compose 
+#crie e inicie o container Nginx com as configurações especificadas: "docker-compose up -d". 
